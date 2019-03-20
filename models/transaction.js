@@ -11,7 +11,7 @@ let transactionSchema = new Schema({
   deposit: { type: Number, default: 0 },
   notes: { type: String, default: '' },
   createdOn: { type: Date, default: Date.now },
-  requestType: { type: mongoose.SchemaTypes.ObjectId, ref: 'Requesttype' }
+  requestType: { type: Schema.Types.ObjectId, ref: 'Researchtype' }
 })
 
 const Transaction = mongoose.model('Transaction', transactionSchema)
